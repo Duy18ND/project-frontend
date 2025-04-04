@@ -4,63 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SweetAlert2 Form Validation</title>
+    <title>SweetAlert2 Example</title>
+    <!-- Thêm thư viện SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        input {
-            padding: 10px;
-            margin: 10px;
-            width: 250px;
-        }
-
-        button {
-            padding: 10px 20px;
-            cursor: pointer;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            font-size: 16px;
-        }
-
-        button:hover {
-            background-color: #218838;
-        }
-    </style>
 </head>
 
 <body>
 
-    <h2>Form Validation with SweetAlert2</h2>
+    <div class="login-form">
+        <img src="/assets/image/Logo-Main.png" alt="Logo-Main" class="img-login-register">
+        <p class="title-login-register">Please sign up</p>
 
-    <form id="myForm">
-        <input type="text" id="username" placeholder="Enter your name">
-        <button type="submit">Submit</button>
-    </form>
+        <div class="input-container">
+            <input type="email" placeholder="Email address" class="input-login-register" id="inputRegisterEmail">
+            <input type="text" placeholder="Username" class="input-login-register" id="inputRegisterUser">
+            <input type="password" placeholder="Password" class="input-login-register" id="inputRegisterPassword">
+        </div>
+        <p class="register-link">Already have an account? <a href="./login.html">Click here!</a></p>
+
+        <!-- Thêm ID cho nút để bắt sự kiện click -->
+        <button class="sign-in-button" id="signRegister">Sign up</button>
+
+        <p class="footer">© 2025 - Rikkei Education</p>
+    </div>
 
     <script>
-        document.getElementById("myForm").addEventListener("submit", function (event) {
-            event.preventDefault(); // Ngăn form gửi đi
+        document.getElementById("signRegister").addEventListener("click", function () {
+            let email = document.getElementById("inputRegisterEmail").value.trim();
+            let username = document.getElementById("inputRegisterUser").value.trim();
+            let password = document.getElementById("inputRegisterPassword").value.trim();
 
-            let username = document.getElementById("username").value.trim();
-
-            if (username === "") {
+            if (email === "" || username === "" || password === "") {
+                // Hiển thị cảnh báo nếu chưa nhập đủ thông tin
                 Swal.fire({
                     icon: "error",
                     title: "Oops...",
-                    text: "Please enter your name!",
+                    text: "Please fill in all the fields!",
                     footer: '<a href="#">Why is this required?</a>'
                 });
             } else {
+                // Hiển thị thông báo thành công nếu nhập đúng
                 Swal.fire({
                     icon: "success",
                     title: "Success!",
-                    text: `Hello, ${username}! Your form has been submitted.`,
+                    text: `Hello, ${username}! Your account has been created.`,
                 });
             }
         });
