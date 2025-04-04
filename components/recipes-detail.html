@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recipes detail</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/chart.css">
+</head>
+
+<body>
+    <!-- Header sẽ được tải động từ file header.html -->
+    <div id="header"></div>
+
+    <!-- Phần Nav -->
+    <nav id="navRecipesDetail">
+        <div class="header-title">
+            <!-- Nút bấm mở/đóng header -->
+            <button id="btnNavRecipesDetail"><i class="fa-solid fa-bars"></i></button>
+            <a href="#">
+                <img src="/assets/avatar/avatar.png" alt="avatar" class="avatar">
+                <span>Đoàn Mạnh Duy</span>
+            </a>
+        </div>
+        <div class="header-title">
+            <div>
+                <p>Recipes</p>
+                <p>Create, check and update recipes</p>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Phần content -->
+    <main id="mainRecipesDetail" class="container-main-recipes">
+        <div class="container-info-recipes">
+            <div class="container-main-child01">
+                <div class="container-image">
+                    <div class="child01">
+                        <p style="color: #ea9f77;"><i class="fa-solid fa-people-group" style="color: #ea9f77;"></i>
+                            CommunityRecipes</p>
+                        <button><i class="fa-regular fa-heart"></i> <i class="fa-solid fa-heart"
+                                style="display: none; color: red;"></i><span>0</span></button>
+                    </div>
+
+                    <div class="child02">
+                        <img src="/assets/menu-food/udon-food.jpg" alt="menu-food" class="commmunity-img">
+                    </div>
+                    <div class="child03">
+                        <p><img src="/assets/icons/describe.png"></p>
+                        <p>Vegetarian dishes</p>
+                    </div>
+                </div>
+
+                <button class="btn-recipes-like"><i class="fa-solid fa-heart" style="color: red;"></i><span
+                        style="margin-left: 10px; font-weight: 600;">Add
+                        to favourite</span></button>
+            </div>
+
+            <div class="container-main-child02">
+                <div class="container-header-recipes">
+                    <p style="color: #676a6c; font-size: 25px;">Basic information</p>
+                    <p style="color: #888888;">Check and edit recipe's basic information</p>
+                </div>
+                <ul class="container-ul-recipes">
+                    <li>
+                        <p>Name</p>
+                        <p>Turmeric Roasted Cauliflower Salad (lowfodmap)</p>
+                    </li>
+                    <li>
+                        <p>Description</p>
+                        <p>Our roasted cauliflower salad with turmeric is low in calories and packed with punchy flavor.
+                            Turmeric
+                            adds lovely color and flavor to this easy vegan-friendly recipe</p>
+                    </li>
+                    <li>
+                        <p>Author</p>
+                        <p>Joana Jardim</p>
+                    </li>
+                    <li>
+                        <p>Total time</p>
+                        <p>00:40</p>
+                    </li>
+                    <li>
+                        <p>Preparation time</p>
+                        <p>00:40</p>
+                    </li>
+                    <li>
+                        <p>Final weight</p>
+                        <p>978.8 grams</p>
+                    </li>
+                    <li>
+                        <p>Portions</p>
+                        <p>4</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <!--Phần Creation-->
+    <nav class="container-nav-creation" id="contentNavRecipesDetail">
+        <p style="color: white; font-size: 25px;">Creation</p>
+        <p style="color: white;">Create the recipe and choose the ingredients</p>
+    </nav>
+
+    <section class="container-section-creation" id="contentSectionRecipesDetail">
+        <div class="container-section-child01">
+            <div class="container-ingredients">
+                <div class="nav-creation">
+                    <div>Ingredients</div>
+                    <div style="color: #888888;">Search and add ingredients to the recipe</div>
+                </div>
+
+                <ul class="container-ul-creation">
+                    <li>1 chopped cup (1/2" pieces) of cauliflower, raw (107 g)</li>
+                    <li>1 tsp of spices, turmeric, ground (3 g)</li>
+                    <li>1 tbsp of olive oil (14 g)</li>
+                    <li>100 grams of rice, brown, medium-grain, raw</li>
+                    <li>150 grams of edamame, frozen, unprepared</li>
+                    <li>1 cup, sections of lemons, raw, without peel (212 g)</li>
+                    <li>1 cup slices of cucumber, with peel, raw (104 g)</li>
+                    <li>4 tbsps of parsley, fresh (15 g)</li>
+                    <li>50 grams of nuts, cashew nuts, oil roasted, with salt added</li>
+                    <li>5 tbsps of vinegar, balsamic (80 g)</li>
+                    <li>4 tbsps of soy sauce made from soy (tamari) (72 g)</li>
+                    <li>1 tablespoon of oil, sesame, salad or cooking (14 g)</li>
+                    <li>1 tbsp of sauce, fish, ready-to-serve (18 g)</li>
+                    <li>2 tbsps of syrups, maple (40 g)</li>
+                </ul>
+            </div>
+
+            <div class="container-cooking">
+                <div class="cooking-child01">
+                    <div style="color: #676a6c; font-size: 25px; font-weight: 500;">Cooking method</div>
+                    <div style="color: #888888;">Give instructions to prepare this recipe</div>
+                </div>
+
+                <div class="cooking-child02">
+                    <div>1</div>
+                    <div>STEP 1 Heat the oven to 200C/fan 180C/gas 6. Put the cauliflower in an ovenproof dish or
+                        tin,
+                        add the turmeric,
+                        some seasoning and 2 tbsp oil, and toss together. Roast for 20-25 minutes until tender. Tip
+                        onto
+                        a plate and cool.
+                        STEP 2 Meanwhile boil the rice in salted water until tender, adding the edamame for the last
+                        minute of cooking,
+                        then drain well. Leave to cool, then tip into a large bowl. Add the roasted cauliflower,
+                        lemon
+                        juice, cucumber and
+                        some seasoning, and toss together. Add the herbs and toss again. Add mint for extra flavor.
+                        STEP
+                        3 Whisk
+                        together the dressing ingredients. Divide the cauliflower and rice between plates, scatter
+                        over
+                        the cashews and
+                        drizzle with the dressing.</div>
+                </div>
+
+            </div>
+        </div>
+
+        <ul class="container-section-child02">
+            <li class="global-analysis-per-portion">
+                <div style="color: #676A6C; font-size: 25px; font-weight: 600;">Global analysis per portion</div>
+                <div style="color: #888888;">Energy, macronutrients and fiber distribution</div>
+                <div class="enegry">
+                    <p>Energy</p>
+                    <h4>351<span>kcal</span></h4>
+                </div>
+                <div class="container-child-nutrition">
+                    <div>
+                        <p style="border: 10px solid #db4965;">16g</p>
+                        <p>Fat</p>
+                    </div>
+                    <div>
+                        <p style="border: 10px solid #ea9f77;">45g</p>
+                        <p>Carbohydrate</p>
+                    </div>
+                    <div>
+                        <p style="border: 10px solid #1ab394;">12g</p>
+                        <p>Protein</p>
+                    </div>
+                    <div>
+                        <p style="border: 10px solid #6a7d93;">6g</p>
+                        <p>Fiber</p>
+                    </div>
+                </div>
+            </li>
+
+            <li class="macronutrients-per-portion">
+                <div style="color: #676a6c; font-size: 25px; font-weight: 700;">Macronutrients per portion</div>
+                <div style="color: #888888;">Macronutrients distribution of the recipe</div>
+                <div class="chart-recipes">
+                    <div style="width: 300px; height: 300px;">
+                        <canvas id="macroChart"></canvas>
+                    </div>
+                    <div class="chart-legend">
+                        <span class="legend-item">
+                            <span class="legend-color" style="background-color: #d9534f;"></span> Fat
+                        </span>
+                        <span class="legend-item">
+                            <span class="legend-color" style="background-color: #f0ad4e;"></span> Carbohydrate
+                        </span>
+                        <span class="legend-item">
+                            <span class="legend-color" style="background-color: #5cb85c;"></span> Protein
+                        </span>
+                    </div>
+                </div>
+
+            </li>
+            <li class="Micronutrients-info">
+                <div style="font-size: 25px; color: #676A6C; font-weight: 700;">Micronutrients per portion</div>
+                <div style="color: #888888; margin-bottom: 30px;">Micronutrients distribution of the recipe</div>
+
+                <div class="child-micronutrients-info">
+                    <div class="micronutrient-item">
+                        <p class="micronutrient-name">Sodium</p>
+                        <p class="micronutrient-value"><strong>1418</strong> mg</p>
+                    </div>
+                    <div class="micronutrient-item">
+                        <p class="micronutrient-name">Vitamin A</p>
+                        <p class="micronutrient-value"><strong>14</strong> ug</p>
+                    </div>
+                    <div class="micronutrient-item">
+                        <p class="micronutrient-name">Vitamin B-6</p>
+                        <p class="micronutrient-value"><strong>0</strong> mg</p>
+                    </div>
+                    <div class="micronutrient-item">
+                        <p class="micronutrient-name">Vitamin B-12</p>
+                        <p class="micronutrient-value"><strong>0</strong> ug</p>
+                    </div>
+                    <div class="micronutrient-item">
+                        <p class="micronutrient-name">Vitamin C</p>
+                        <p class="micronutrient-value"><strong>50</strong> mg</p>
+                    </div>
+                    <div class="micronutrient-item">
+                        <p class="micronutrient-name">Vitamin D (D2 + D3)</p>
+                        <p class="micronutrient-value"><strong>0</strong> ug</p>
+                    </div>
+                    <div class="micronutrient-item">
+                        <p class="micronutrient-name">Vitamin E</p>
+                        <p class="micronutrient-value"><strong>1</strong> mg</p>
+                    </div>
+                    <div class="micronutrient-item">
+                        <p class="micronutrient-name">Vitamin K</p>
+                        <p class="micronutrient-value"><strong>87</strong> ug</p>
+                    </div>
+                    <div class="micronutrient-item">
+                        <p class="micronutrient-name">Sugars</p>
+                        <p class="micronutrient-value"><strong>13</strong> g</p>
+                    </div>
+                    <div class="micronutrient-item">
+                        <p class="micronutrient-name">Calcium</p>
+                        <p class="micronutrient-value"><strong>88</strong> mg</p>
+                    </div>
+                    <div class="micronutrient-item">
+                        <p class="micronutrient-name">Iron</p>
+                        <p class="micronutrient-value"><strong>4</strong> mg</p>
+                    </div>
+                    <div class="micronutrient-item">
+                        <p class="micronutrient-name">Magnesium</p>
+                        <p class="micronutrient-value"><strong>127</strong> mg</p>
+                    </div>
+                    <div class="micronutrient-item">
+                        <p class="micronutrient-name">Phosphorus</p>
+                        <p class="micronutrient-value"><strong>251</strong> mg</p>
+                    </div>
+                    <div class="micronutrient-item">
+                        <p class="micronutrient-name">Potassium</p>
+                        <p class="micronutrient-value"><strong>649</strong> mg</p>
+                    </div>
+                    <div class="micronutrient-item">
+                        <p class="micronutrient-name">Zinc</p>
+                        <p class="micronutrient-value"><strong>2</strong> mg</p>
+                    </div>
+                    <div class="micronutrient-item">
+                        <p class="micronutrient-name">Copper</p>
+                        <p class="micronutrient-value"><strong>1</strong> mg</p>
+                    </div>
+                    <div class="micronutrient-item">
+                        <p class="micronutrient-name">Fluoride</p>
+                        <p class="micronutrient-value"><strong>1</strong> ug</p>
+                    </div>
+                    <div class="micronutrient-item">
+                        <p class="micronutrient-name">Manganese</p>
+                        <p class="micronutrient-value"><strong>2</strong> mg</p>
+                    </div>
+                    <div class="micronutrient-item">
+                        <p class="micronutrient-name">Selenium</p>
+                        <p class="micronutrient-value"><strong>4</strong> ug</p>
+                    </div>
+                    <div class="micronutrient-item">
+                        <p class="micronutrient-name">Thiamin</p>
+                        <p class="micronutrient-value"><strong>0</strong> mg</p>
+                    </div>
+                    <div class="micronutrient-item">
+                        <p class="micronutrient-name">Riboflavin</p>
+                        <p class="micronutrient-value"><strong>0</strong> mg</p>
+                    </div>
+                    <div class="micronutrient-item">
+                        <p class="micronutrient-name">Niacin</p>
+                        <p class="micronutrient-value"><strong>3</strong> mg</p>
+                    </div>
+                    <div class="micronutrient-item">
+                        <p class="micronutrient-name">Pantothenic acid</p>
+                        <p class="micronutrient-value"><strong>1</strong> mg</p>
+                    </div>
+                    <div class="micronutrient-item">
+                        <p class="micronutrient-name">Folate, total</p>
+                        <p class="micronutrient-value"><strong>156</strong> ug</p>
+                    </div>
+                </div>
+
+            </li>
+
+        </ul>
+    </section>
+    <script src="/js/script.js"></script>
+    <script src="/js/utils.js"></script>
+    <script src="/js/SignOut.js"></script>
+    <script src="/js/chart.js"></script>
+
+</body>
+
+</html>

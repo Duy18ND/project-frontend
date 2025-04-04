@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SweetAlert2 Form Validation</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+            width: 250px;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Form Validation with SweetAlert2</h2>
+
+    <form id="myForm">
+        <input type="text" id="username" placeholder="Enter your name">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Ngăn form gửi đi
+
+            let username = document.getElementById("username").value.trim();
+
+            if (username === "") {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Please enter your name!",
+                    footer: '<a href="#">Why is this required?</a>'
+                });
+            } else {
+                Swal.fire({
+                    icon: "success",
+                    title: "Success!",
+                    text: `Hello, ${username}! Your form has been submitted.`,
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>

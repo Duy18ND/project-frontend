@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400..700&family=Cedarville+Cursive&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Heebo:wght@100..900&family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <header id="header"> <!-- Thêm id="header" để script có thể tìm thấy -->
+        <!-- Logo -->
+        <div class="image-header">
+            <img src="/assets/image/Logo-Main.png" alt="Website Logo">
+        </div>
+
+        <!-- Menu Navigation -->
+        <div class="item-header">
+            <div>
+                <a href="../components/homePage.html" class="menu-item">
+                    <div class="icon-menu">
+                        <i class="fa-solid fa-house"></i>
+                    </div>
+                    <div class="tile-menu">HomePage</div>
+                </a>
+
+                <a href="../components/foods.html" class="menu-item">
+                    <div class="icon-menu">
+                        <i class="fa-solid fa-apple-whole"></i>
+                    </div>
+                    <div class="tile-menu">Foods</div>
+                </a>
+
+                <a href="../components/recipes.html" class="menu-item">
+                    <div class="icon-menu">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <div class="tile-menu">Recipes</div>
+                </a>
+            </div>
+            <button class="sign-out" onclick="signOut()">
+                <i class="fa-solid fa-user-plus"></i>
+                <span>Sign Out</span>
+            </button>
+        </div>
+    </header>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/SignOut.js"></script>
+</body>
+
+</html>

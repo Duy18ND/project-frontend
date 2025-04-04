@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foods</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+</head>
+
+<body>
+    <!-- Phần header -->
+    <div id="header"></div>
+
+    <!-- Phần nav -->
+    <nav id="navFood">
+        <div class="header-title">
+            <!-- Nút bấm mở/đóng header -->
+            <button id="btnNavFood"><i class="fa-solid fa-bars"></i></button>
+            <a href="#">
+                <img src="/assets/avatar/avatar.png" alt="avatar" class="avatar">
+                <span>Đoàn Mạnh Duy</span>
+            </a>
+        </div>
+        <div class="header-title">
+            <div>
+                <p>Food databases</p>
+                <p>Create, check and update foods that you can use on meal plans</p>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Phần content -->
+    <main id="mainFood">
+        <!-- Phần Search -->
+        <section class="section-search" id="section-recipes">
+            <div class="section-title">
+                <div>
+                    <p>Food databases</p>
+                    <p>Create, check and update foods that you can use on meal plans</p>
+                </div>
+            </div>
+
+            <div class="section-search-form">
+                <div class="section-search-item">
+                    <input type="text" placeholder="Search Food">
+                </div>
+
+                <div class="section-search-item">
+                    <button>
+                        <i class="fa-solid fa-arrow-up-wide-short"></i>
+                    </button>
+                    <input type="text" placeholder="Sort by nutrient">
+                </div>
+
+                <div class="section-search-item">
+                    <select>
+                        <option value="">Select Category</option>
+                        <option value="vegetarian">Vegetarian</option>
+                        <option value="vegan">Vegan</option>
+                        <option value="low-carb">Low Carb</option>
+                        <option value="high-protein">High Protein</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <div class="contentFoods">
+
+            <button class="container-foods" id="btnContentFoods">
+                <div>
+                    <p class="food-title">Ackee, canned, drained</p>
+                    <p class="food-reference">McCance and Widdowson's</p>
+                </div>
+
+
+                <ul class="container-li-foods">
+                    <li>
+                        <p class="food-title">151 kcal</p>
+                        <p class="food-reference">Energy</p>
+                    </li>
+                    <li>
+                        <p class="food-title">15g</p>
+                        <p class="food-reference">Fat</p>
+                    </li>
+                    <li>
+                        <p class="food-title">1g</p>
+                        <p class="food-reference">Carbohydrate</p>
+                    </li>
+                    <li>
+                        <p class="food-title">3g</p>
+                        <p class="food-reference">Protein</p>
+                    </li>
+                </ul>
+            </button>
+            <!-- Thêm ở đây -->
+        </div>
+
+        <!-- Thêm Create Food -->
+        <button class="create-food"><i class="fas fa-plus"></i><span>Create Food</span></button>
+    </main>
+    <!--Phần hiển thị thông tin giá trị dinh dưỡng món ăn  -->
+    <div class="food-information" id="foodInformation">
+        <div class="container-foods-header">
+            <h3 class="tagH3" style="font-size: 30px;">Food information</h3>
+            <p style="color: #676a6c;">Check and update the information about the food</p>
+        </div>
+
+        <ul class="container-foods-info">
+            <li class="container-foods-child01">
+                <p>Name</p>
+                <p>Ackee, canned, drained</p>
+            </li>
+            <li class="container-foods-child01">
+                <p>Source</p>
+                <p>McCance and Widdowson's</p>
+            </li>
+            <li class="container-foods-child01">
+                <p>Category</p>
+                <p>Vegetables and Vegetable Products</p>
+            </li>
+            <li class="container-foods-child02">
+                <p>Quantity</p>
+                <p style="background-color: white;">100</p>
+                <p style="background-color: white;">gram</p>
+            </li>
+        </ul>
+
+        <div class="nutritional-value">Nutritional value per 100 g</div>
+
+        <div class="container-foods-macronutrients">
+            <h3 class="tagH3">Macronutrients</h3>
+            <ul class="macronutrients">
+                <li>
+                    <p>Energy</p>
+                    <p>151.0</p>
+                    <p>kcal</p>
+                </li>
+                <li>
+                    <p>Fat</p>
+                    <p>15.2</p>
+                    <p>g</p>
+                </li>
+                <li>
+                    <p>Carbohydrate</p>
+                    <p>0.8</p>
+                    <p>g</p>
+                </li>
+                <li>
+                    <p>Protein</p>
+                    <p>2.9</p>
+                    <p>g</p>
+                </li>
+                <!-- Thêm ở đây -->
+            </ul>
+        </div>
+
+        <!--Phần hiển thị thông tin giá trị dinh dưỡng thức ăn  -->
+        <div class="container-foods-micronutrients">
+            <h3 class="tagH3">Micronutrients</h3>
+            <ul class="micronutrients">
+
+                <li>
+                    <p>Cholesterol</p>
+                    <p>0.0</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Water</p>
+                    <p>76.7</p>
+                    <p>%</p>
+                </li>
+                <li>
+                    <p>Vitamin B-12</p>
+                    <p>0.0</p>
+                    <p>µg</p>
+                </li>
+                <li>
+                    <p>Vitamin E</p>
+                    <p>0.0</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Lactose</p>
+                    <p>0.0</p>
+                    <p>g</p>
+                </li>
+                <li>
+                    <p>Sugars</p>
+                    <p>0.0</p>
+                    <p>g</p>
+                </li>
+                <li>
+                    <p>Magnesium</p>
+                    <p>0.0</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Zinc</p>
+                    <p>0.0</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Riboflavin</p>
+                    <p>0.0</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Fatty acids, total saturated</p>
+                    <p>0.0</p>
+                    <p>g</p>
+                </li>
+                <li>
+                    <p>Chloride</p>
+                    <p>345.1</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Fiber</p>
+                    <p>0</p>
+                    <p>g</p>
+                </li>
+                <li>
+                    <p>Vitamin A</p>
+                    <p>0</p>
+                    <p>µg</p>
+                </li>
+                <li>
+                    <p>Vitamin C</p>
+                    <p>30.0</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Vitamin K</p>
+                    <p>0</p>
+                    <p>µg</p>
+                </li>
+                <li>
+                    <p>Moist</p>
+                    <p>0</p>
+                    <p>g</p>
+                </li>
+                <li>
+                    <p>Calcium</p>
+                    <p>0</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Phosphorus</p>
+                    <p>40.9</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Copper</p>
+                    <p>0.02</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Selenium</p>
+                    <p>0.0</p>
+                    <p>µg</p>
+                </li>
+                <li>
+                    <p>Sodium</p>
+                    <p>2400</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Vitamin B-6</p>
+                    <p>0.0</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Vitamin D</p>
+                    <p>0.0</p>
+                    <p>µg</p>
+                </li>
+                <li>
+                    <p>Starch</p>
+                    <p>0.0</p>
+                    <p>g</p>
+                </li>
+                <li>
+                    <p>Caffeine</p>
+                    <p>0.0</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Fluoride</p>
+                    <p>2000</p>
+                    <p>µg</p>
+                </li>
+                <li>
+                    <p>Thiamin</p>
+                    <p>0.05</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Pantothenic acid</p>
+                    <p>0.0</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Fatty acids, total monounsaturated</p>
+                    <p>0.0</p>
+                    <p>g</p>
+                </li>
+                <li>
+                    <p>Fatty acids, total polyunsaturated</p>
+                    <p>0.0</p>
+                    <p>g</p>
+                </li>
+
+                <!-- Thêm ở đây -->
+            </ul>
+        </div>
+
+
+        <!-- Nút button Thoát khỏi thông tin giá trị thức ăn -->
+        <div class="btn-food-info">
+            <button id="btnCancel">Cancel</button>
+        </div>
+    </div>
+    <!-- Phần thêm thức ăn -->
+    <div class="add-foods">
+        <div class="container-foods-header">
+            <h3 class="tagH3" style="font-size: 30px;">Food information</h3>
+            <p style="color: #676a6c;">Check and update the information about the food</p>
+        </div>
+
+        <ul class="container-foods-info">
+            <li class="container-foods-child01">
+                <p>Name</p>
+                <p>Ackee, canned, drained</p>
+            </li>
+            <li class="container-foods-child01">
+                <p>Source</p>
+                <p>McCance and Widdowson's</p>
+            </li>
+            <li class="container-foods-child01">
+                <p>Category</p>
+                <p>Vegetables and Vegetable Products</p>
+            </li>
+            <li class="container-foods-child02">
+                <p>Quantity</p>
+                <p style="background-color: white;">100</p>
+                <p style="background-color: white;">gram</p>
+            </li>
+        </ul>
+
+        <div class="nutritional-value">Nutritional value per 100 g</div>
+
+        <div class="container-foods-macronutrients">
+            <h3 class="tagH3">Macronutrients</h3>
+            <ul class="macronutrients">
+                <li>
+                    <p>Energy</p>
+                    <p>151.0</p>
+                    <p>kcal</p>
+                </li>
+                <li>
+                    <p>Fat</p>
+                    <p>15.2</p>
+                    <p>g</p>
+                </li>
+                <li>
+                    <p>Carbohydrate</p>
+                    <p>0.8</p>
+                    <p>g</p>
+                </li>
+                <li>
+                    <p>Protein</p>
+                    <p>2.9</p>
+                    <p>g</p>
+                </li>
+                <!-- Thêm ở đây -->
+            </ul>
+        </div>
+
+        <!--Phần hiển thị thông tin giá trị dinh dưỡng thức ăn  -->
+        <div class="container-foods-micronutrients">
+            <h3 class="tagH3">Micronutrients</h3>
+            <ul class="micronutrients">
+
+                <li>
+                    <p>Cholesterol</p>
+                    <p>0.0</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Water</p>
+                    <p>76.7</p>
+                    <p>%</p>
+                </li>
+                <li>
+                    <p>Vitamin B-12</p>
+                    <p>0.0</p>
+                    <p>µg</p>
+                </li>
+                <li>
+                    <p>Vitamin E</p>
+                    <p>0.0</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Lactose</p>
+                    <p>0.0</p>
+                    <p>g</p>
+                </li>
+                <li>
+                    <p>Sugars</p>
+                    <p>0.0</p>
+                    <p>g</p>
+                </li>
+                <li>
+                    <p>Magnesium</p>
+                    <p>0.0</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Zinc</p>
+                    <p>0.0</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Riboflavin</p>
+                    <p>0.0</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Fatty acids, total saturated</p>
+                    <p>0.0</p>
+                    <p>g</p>
+                </li>
+                <li>
+                    <p>Chloride</p>
+                    <p>345.1</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Fiber</p>
+                    <p>0</p>
+                    <p>g</p>
+                </li>
+                <li>
+                    <p>Vitamin A</p>
+                    <p>0</p>
+                    <p>µg</p>
+                </li>
+                <li>
+                    <p>Vitamin C</p>
+                    <p>30.0</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Vitamin K</p>
+                    <p>0</p>
+                    <p>µg</p>
+                </li>
+                <li>
+                    <p>Moist</p>
+                    <p>0</p>
+                    <p>g</p>
+                </li>
+                <li>
+                    <p>Calcium</p>
+                    <p>0</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Phosphorus</p>
+                    <p>40.9</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Copper</p>
+                    <p>0.02</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Selenium</p>
+                    <p>0.0</p>
+                    <p>µg</p>
+                </li>
+                <li>
+                    <p>Sodium</p>
+                    <p>2400</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Vitamin B-6</p>
+                    <p>0.0</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Vitamin D</p>
+                    <p>0.0</p>
+                    <p>µg</p>
+                </li>
+                <li>
+                    <p>Starch</p>
+                    <p>0.0</p>
+                    <p>g</p>
+                </li>
+                <li>
+                    <p>Caffeine</p>
+                    <p>0.0</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Fluoride</p>
+                    <p>2000</p>
+                    <p>µg</p>
+                </li>
+                <li>
+                    <p>Thiamin</p>
+                    <p>0.05</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Pantothenic acid</p>
+                    <p>0.0</p>
+                    <p>mg</p>
+                </li>
+                <li>
+                    <p>Fatty acids, total monounsaturated</p>
+                    <p>0.0</p>
+                    <p>g</p>
+                </li>
+                <li>
+                    <p>Fatty acids, total polyunsaturated</p>
+                    <p>0.0</p>
+                    <p>g</p>
+                </li>
+
+                <!-- Thêm ở đây -->
+            </ul>
+        </div>
+
+
+        <!-- Nút button Thoát khỏi thông tin giá trị thức ăn -->
+        <div class="btn-food-info">
+            <button id="btnCancel">Cancel</button>
+            <button id="btnSaveFood">Save and close</button>
+        </div>
+    </div>
+    <script src="/js/utils.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/foods.js"></script>
+    <script src="/js/SignOut.js"></script>
+</body>
+
+</html>

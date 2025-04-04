@@ -1,0 +1,34 @@
+.chart-legend {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+    align-items: center;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.legend-color {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.macronutrients-per-portion {
+    padding: 20px;
+    background-color: white;
+    list-style-type: none;
+}
+
+.chart-recipes {
+    margin: 40px 0px 25px 0px;
+    margin-left: 20%;
+}
+
+.chart-legend {
+    padding-top: 20px;
+}

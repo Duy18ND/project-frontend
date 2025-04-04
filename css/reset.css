@@ -1,0 +1,34 @@
+/* nav đóng mở thẻ header */
+.navHomePage {
+    width: 100%;
+    margin-left: 0px;
+}
+
+.mainHomePage {
+    width: 100%;
+    margin-left: 0px;
+}
+
+/* nav đóng mở thẻ header */
+.navFood {
+    width: 100%;
+    margin-left: 0px;
+}
+
+.mainFood {
+    width: 100%;
+    margin-left: 0px;
+}
+
+/* Nút mở thông tim food */
+.navRecipes {
+    width: 100%;
+    margin-left: 0px;
+}
+
+.mainRecipes {
+    width: 100%;
+    margin-left: 0px;
+}
+
+/* Nút mở. đóng thông tin recipesDetail */
