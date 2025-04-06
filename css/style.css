@@ -346,21 +346,24 @@ main .main-title p:nth-of-type(2) {
     align-items: center;
 }
 
-.section-MyRecipes div:nth-of-type(1) i {
+.section-MyRecipes div i {
     color: red;
 }
 
-.section-MyRecipes div i,
-a {
-    color: #2ba0cc;
-    padding: 0px 3px;
-}
-
-.section-MyRecipes div:nth-of-type(2) {
+.section-MyRecipes button {
+    display: flex;
+    gap: 10px;
     cursor: pointer;
-    padding: 6px;
+    align-items: center;
+}
+.section-MyRecipes .btnMyRecipes{
     border: 1px solid #f2f2f2;
     background-color: white;
+    padding: 5px;
+}
+.section-MyRecipes .btnMyRecipes p,
+ .section-MyRecipes .btnMyRecipes i {
+  color:#2ba0cc;
 }
 
 /* Blog */
@@ -432,6 +435,7 @@ a {
     width: auto;
     height: auto;
     overflow: hidden;
+    background-color: white;
 }
 
 .tag .commmunity-img {
@@ -440,12 +444,12 @@ a {
     height: auto;
     object-fit: cover;
     object-fit: contain;
-}
+}  
 
 .tag .commmunity {
     position: absolute;
     left: 25px;
-    top: 25px;
+    top: 30px;
     color: #ea9f77;
     background-color: white;
     padding: 1px 3px;
@@ -465,7 +469,7 @@ a {
 
 .nutritional-info {
     display: flex;
-    gap: 8px;
+    gap: 20px;
 }
 
 .container-menu .commmunity-img {
@@ -1151,7 +1155,7 @@ a {
 .micronutrient-item {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 6px;
     border: 1px solid #eeeeee;
 }
 

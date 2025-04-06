@@ -15,10 +15,10 @@
     <div id="header"></div>
 
     <!-- Phần Nav -->
-    <nav id="navRecipes">
+    <nav id="navHomePage">
         <div class="header-title">
             <!-- Nút bấm mở/đóng header -->
-            <button id="btnNavRecipes"><i class="fa-solid fa-bars"></i></button>
+            <button id="btnNavHomePage"><i class="fa-solid fa-bars"></i></button>
             <a href="#">
                 <img src="/assets/avatar/avatar.png" alt="avatar" class="avatar">
                 <span>Đoàn Mạnh Duy</span>
@@ -33,7 +33,7 @@
     </nav>
 
     <!--Phần nội dung homePage  -->
-    <main id="mainRecipes">
+    <main id="mainHomePage">
         <!-- Phần Search -->
         <section class="section-search" id="section-recipes">
             <div class="section-title">
@@ -65,116 +65,26 @@
                     </select>
                 </div>
             </div>
-
-            <!-- Phần yêu thích món ăn của tôi -->
-            <div class="section-MyRecipes">
+             <!-- Phần yêu thích món ăn của tôi -->
+             <div class="section-MyRecipes" id="sectionMyRecipes">
                 <div>
                     <p><i class="fa-solid fa-heart"></i></p>
                     <p>Favorites</p>
                     <p>0</p>
                 </div>
-                <div>
-                    <a href="#"><i class="fa-solid fa-square-check"></i></a>
-                    <a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
-                    <a href="#">My recipes</a>
-                </div>
+                <button class="btnMyRecipes">
+                    <i class="fa-solid fa-square-check"></i>
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <p>My recipes</p>
+                </button>
             </div>
         </section>
 
         <!-- Phần content -->
-        <div class="contentHomePage">
-
-            <div class="container-menu">
-                <div class="tag">
-                    <img src="/assets/menu-food/udon-food.jpg" alt="menu-food" class="commmunity-img">
-                    <p class="commmunity"><i class="fa-solid fa-people-group"></i> Community Recipes</p>
-                </div>
-
-                <div>
-                    <ul class="info-menu">
-                        <li>
-                            <h5 style="font-size: 18px;">Turmeric Roasted Cauliflower Salad (lowfodmap)</h5>
-                        </li>
-                        <li>
-                            <div class="title-like">
-                                <p>Joana Jardim</p>
-                                <button><i class="fa-solid fa-heart"></i><span>0</span></button>
-                            </div>
-                        </li>
-                        <li> <img src="/assets/icons/describe.png">Vegetarian dishes</li>
-                        <li class="nutritional-info">
-                            <div class="nutritional">
-                                <h5>By</h5>
-                                <p>100g</p>
-                            </div>
-                            <div class="nutritional">
-                                <h5>Energy</h5>
-                                <p>87 kcal</p>
-                            </div>
-                            <div class="nutritional">
-                                <h5>Fat</h5>
-                                <p>4g</p>
-                            </div>
-                            <div class="nutritional">
-                                <h5>Carbohydrate</h5>
-                                <p>8g</p>
-                            </div>
-                            <div class="nutritional">
-                                <h5>Protein</h5>
-                                <p>5g</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="container-menu">
-                <div class="tag">
-                    <img src="/assets/menu-food/udon-food.jpg" alt="menu-food" class="commmunity-img">
-                    <p class="commmunity"><i class="fa-solid fa-people-group"></i> Community Recipes</p>
-                </div>
-
-                <div>
-                    <ul class="info-menu">
-                        <li>
-                            <h5 style="font-size: 18px;">Turmeric Roasted Cauliflower Salad (lowfodmap)</h5>
-                        </li>
-                        <li>
-                            <div class="title-like">
-                                <p>Joana Jardim</p>
-                                <button><i class="fa-solid fa-heart"></i><span>0</span></button>
-                            </div>
-                        </li>
-                        <li> <img src="/assets/icons/describe.png">Vegetarian dishes</li>
-                        <li class="nutritional-info">
-                            <div class="nutritional">
-                                <h5>By</h5>
-                                <p>100g</p>
-                            </div>
-                            <div class="nutritional">
-                                <h5>Energy</h5>
-                                <p>87 kcal</p>
-                            </div>
-                            <div class="nutritional">
-                                <h5>Fat</h5>
-                                <p>4g</p>
-                            </div>
-                            <div class="nutritional">
-                                <h5>Carbohydrate</h5>
-                                <p>8g</p>
-                            </div>
-                            <div class="nutritional">
-                                <h5>Protein</h5>
-                                <p>5g</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <div class="contentHomePage" id="contentRecipes">
             <!-- Thêm ở đây -->
         </div>
 
-        <div></div>
         <div class="btn-select-page">
             <button><i class="fa-solid fa-backward"></i> </button>
             <button>1</button>
@@ -187,7 +97,8 @@
 
     <script src="/js/script.js"></script>
     <script src="/js/utils.js"></script>
-    <script src="/js/SignOut.js"></script>
+    <script src="/js/SignOut.js"></script>   
+    <script src="/js/recipes.js"></script>
 </body>
 
 </html>
