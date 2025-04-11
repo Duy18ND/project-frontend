@@ -85,4 +85,20 @@ document.addEventListener("DOMContentLoaded", function () {
             contentSectionRecipesDetail.classList.toggle("contentSectionRecipesDetail", !isHidden);
         });
     }
+
 });
+function btnEdit(button) {
+    const input = button.previousElementSibling; // Lấy phần tử <input> trước nút button
+
+    // Bỏ thuộc tính disabled khi nhấn vào nút
+    input.disabled = false;
+
+    // Đặt lại focus vào input khi nhấn vào nút để dễ dàng chỉnh sửa
+    input.focus();
+
+    // Khi người dùng rời khỏi input (blur), thêm lại thuộc tính disabled và lưu giá trị
+    input.addEventListener("blur", function () {
+        // Khi người dùng rời khỏi input (blur), thực hiện hành động sau
+        input.disabled = true; // Đặt lại thuộc tính disabled
+    });
+}

@@ -1,58 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SweetAlert2 Example</title>
-    <!-- Thêm thư viện SweetAlert2 -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Chỉnh sửa thông tin</title>
+    <style>
+        .edit-btn {
+            cursor: pointer;
+            color: blue;
+        }
+    </style>
 </head>
 
 <body>
-
-    <div class="login-form">
-        <img src="/assets/image/Logo-Main.png" alt="Logo-Main" class="img-login-register">
-        <p class="title-login-register">Please sign up</p>
-
-        <div class="input-container">
-            <input type="email" placeholder="Email address" class="input-login-register" id="inputRegisterEmail">
-            <input type="text" placeholder="Username" class="input-login-register" id="inputRegisterUser">
-            <input type="password" placeholder="Password" class="input-login-register" id="inputRegisterPassword">
-        </div>
-        <p class="register-link">Already have an account? <a href="./login.html">Click here!</a></p>
-
-        <!-- Thêm ID cho nút để bắt sự kiện click -->
-        <button class="sign-in-button" id="signRegister">Sign up</button>
-
-        <p class="footer">© 2025 - Rikkei Education</p>
+    <div>
+        <label for="info">Thông tin của bạn: </label>
+        <input type="text" id="info" value="Nhấn vào bút để chỉnh sửa" disabled>
+        <span class="edit-btn" onclick="enableEdit()">✏️</span>
     </div>
 
     <script>
-        document.getElementById("signRegister").addEventListener("click", function () {
-            let email = document.getElementById("inputRegisterEmail").value.trim();
-            let username = document.getElementById("inputRegisterUser").value.trim();
-            let password = document.getElementById("inputRegisterPassword").value.trim();
+        function enableEdit() {
+            var inputField = document.getElementById("info");
+            inputField.disabled = false;  // Cho phép nhập thông tin
+            inputField.focus();  // Đưa con trỏ vào ô nhập
+        }
 
-            if (email === "" || username === "" || password === "") {
-                // Hiển thị cảnh báo nếu chưa nhập đủ thông tin
-                Swal.fire({
-                    icon: "error",
-                    title: "Oops...",
-                    text: "Please fill in all the fields!",
-                    footer: '<a href="#">Why is this required?</a>'
-                });
-            } else {
-                // Hiển thị thông báo thành công nếu nhập đúng
-                Swal.fire({
-                    icon: "success",
-                    title: "Success!",
-                    text: `Hello, ${username}! Your account has been created.`,
-                });
-            }
+        // Khi người dùng nhấn ra ngoài ô input, vô hiệu hóa ô nhập lại
+        document.getElementById("info").addEventListener("blur", function () {
+            this.disabled = true;
         });
     </script>
-
 </body>
 
 </html>

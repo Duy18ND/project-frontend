@@ -31,4 +31,8 @@
     margin-left: 0px;
 }
 
-/* Nút mở. đóng thông tin recipesDetail */
+/* Kiểm tra btnActive */
+.btn-active {
+    background-color: #cfcfcf;
+    font-weight: bold;
+}

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recipes detail</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/chart.css">
+</head>
+
+<body>
+    <!-- Header sẽ được tải động từ file header.html -->
+    <div id="header"></div>
+    <!-- Phần Nav -->
+    <nav id="navRecipesDetail">
+        <div class="header-title">
+            <!-- Nút bấm mở/đóng header -->
+            <button id="btnNavRecipesDetail"><i class="fa-solid fa-bars"></i></button>
+            <a href="#">
+                <img src="/assets/avatar/avatar.png" alt="avatar" class="avatar">
+                <span>Đoàn Mạnh Duy</span>
+            </a>
+        </div>
+        <div class="header-title">
+            <div>
+                <p>Recipes</p>
+                <p>Create, check and update recipes</p>
+            </div>
+        </div>
+    </nav>
+    <!-- Phần content -->
+    <div id="containerAddRecipesDetail">
+        <main id="mainRecipesDetail" class="container-main-recipes">
+            <div class="container-info-recipes">
+                <div class="container-main-child01">
+                    <div class="container-image">
+                        <div class="child01">
+                            <button class="addImage" id="btnMyRecipes"><i class="fa-solid fa-pen-to-square"></i> My
+                                recipes</button>
+                            <button>
+                                <i class="fa-regular fa-heart"></i>
+                                <span>0</span>
+                            </button>
+                        </div>
+
+                        <div class="child02" id="addRecipesImage">
+                            <!-- Thêm ảnh ở đây -->
+                            <input type="file" id="fileImageInput" accept="image/*" style="display: none;">
+                        </div>
+
+                        <div class="category-wrapper" style="position: relative; width: 60%;">
+                            <button id="btnNewCategory"
+                                style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                                <i id="icatagory" class="fa-solid fa-plus" style="color: #ea9f77;"></i>
+                                <span id="NewCatagory" style="color: #ea9f77; font-weight: bold;">New category</span>
+                            </button>
+
+                            <select id="NewCatagoryRecipes"
+                                style="display: none; width: 100%; margin-top: 8px; padding: 6px; border-radius: 6px; border: 1px solid #ccc;">
+                                <option value="New Category">Thêm mới hoặc chọn từ dropdown</option>
+                                <option value="Breakfast and snacks">Breakfast and snacks</option>
+                                <option value="Appetizers and side dishes">Appetizers and side dishes</option>
+                                <option value="Meat dishes">Meat dishes</option>
+                                <option value="Fish dishes">Fish dishes</option>
+                                <option value="Vegetarian dishes">Vegetarian dishes</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <button class="btn-recipes-like"><i class="fa-solid fa-heart" style="color: red;"></i><span
+                            style="margin-left: 10px; font-weight: 600;">Add
+                            to favourite</span></button>
+                </div>
+
+                <div class="container-main-child02">
+                    <div class="container-header-recipes">
+                        <div class="container-add-push">
+                            <div>
+                                <p style="color: #676a6c; font-size: 25px;">Publish recipe</p>
+                                <p style="color: #888888;">Publish your recipe on your website or share it with the
+                                    Nutrium
+                                    community</p>
+                            </div>
+                            <button id="btnPublish">Publish</button>
+                        </div>
+                    </div>
+                    <ul class="container-ul-recipes-add">
+                        <li>
+                            <p>Name</p>
+                            <p class="inputFoodAdd">
+                                <input type="text" id="inputName" disabled>
+                                <button onclick="btnEdit(this)">
+                                    <i class="fa-solid fa-pen" style="color: #1ab394;"></i>
+                                </button>
+                            </p>
+                        </li>
+                        <li>
+                            <p>Description</p>
+                            <p class="inputFoodAdd">
+                                <input type="text" id="inputDescription" disabled>
+                                <button onclick="btnEdit(this)">
+                                    <i class="fa-solid fa-pen" style="color: #1ab394;"></i>
+                                </button>
+                            </p>
+                        </li>
+                        <li>
+                            <p>Author</p>
+                            <p class="inputFoodAdd">
+                                <input type="text" id="inputAuthor" disabled>
+                                <button onclick="btnEdit(this)">
+                                    <i class="fa-solid fa-pen" style="color: #1ab394;"></i>
+                                </button>
+                            </p>
+                        </li>
+                        <li>
+                            <p>Total time</p>
+                            <p class="inputFoodAdd">
+                                <input type="text" id="inputTotalTime" disabled>
+                                <button onclick="btnEdit(this)">
+                                    <i class="fa-solid fa-pen" style="color: #1ab394;"></i>
+                                </button>
+                            </p>
+                        </li>
+                        <li>
+                            <p>Preparation time</p>
+                            <p class="inputFoodAdd">
+                                <input type="text" id="inputPrepTime" disabled>
+                                <button onclick="btnEdit(this)">
+                                    <i class="fa-solid fa-pen" style="color: #1ab394;"></i>
+                                </button>
+                            </p>
+                        </li>
+                        <li>
+                            <p>Final weight</p>
+                            <p class="inputFoodAdd">
+                                <input type="text" id="inputFinalWeight" disabled>
+                                <button onclick="btnEdit(this)">
+                                    <i class="fa-solid fa-pen" style="color: #1ab394;"></i>
+                                </button>
+                            </p>
+                        </li>
+                        <li>
+                            <p>Portions</p>
+                            <p class="inputFoodAdd">
+                                <input type="text" id="inputPortions" disabled>
+                                <button onclick="btnEdit(this)">
+                                    <i class="fa-solid fa-pen" style="color: #1ab394;"></i>
+                                </button>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <!--Phần Creation-->
+        <nav class="container-nav-creation" id="contentNavRecipesDetail">
+            <p style="color: white; font-size: 25px;">Creation</p>
+            <p style="color: white;">Create the recipe and choose the ingredients</p>
+        </nav>
+
+        <section class="container-section-creation" id="contentSectionRecipesDetail">
+            <div class="container-section-child01">
+                <div class="container-ingredients">
+                    <div class="nav-creation">
+                        <div>Ingredients</div>
+                        <div style="color: #888888;">Search and add ingredients to the recipe</div>
+                    </div>
+
+                    <!-- thêm thành phần mới     -->
+                    <div class="container-add-ingredient">
+                        <div id="contentAddRecipes">
+                            <!-- Thêm ở đây -->
+                        </div>
+                        <div class="child01-add-ingredient">
+                            <button id="btnAddIngedient">
+                                <div>
+                                    <i class="fa-solid fa-plus" style="color: #1ab394;" id="iIngredient01"></i>
+                                    <i class="fa-solid fa-chevron-up" style="color: #1ab394;" id="iIngredient02"></i>
+                                </div>
+                                <div style="color: #676A6C;">Add new food equivalent</div>
+                            </button>
+                        </div>
+
+                        <div class="child02-add-ingredient" id="child02-add-ingredient">
+                            <div class="input-wrap"><input type="text" placeholder="Search food"></div>
+                            <div class="input-wrap">
+                                <button><i class="fa-solid fa-arrow-up-wide-short"></i></button>
+                                <select name="" id="SecletSortNutrient">
+                                    <option value="">Sort by nutrient</option>
+                                    <!-- Thêm ở đây -->
+                                </select>
+                            </div>
+                            <div class="input-wrap">
+                                <select name="" id="">
+                                    <option value="">All databases</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="child03-add-ingredient" id="child03-add-ingredient">
+                            <!-- Tiêu đề -->
+                            <ol class="container-ol-recipes-info">
+                                <li style="width: 50%;" class="container-ol-li-recipes-info-01">Nutritional Information
+                                </li>
+                                <li style="width: 50%;" class="container-ol-li-recipes-info-02">
+                                    <div style="width: 23%;">Energy</div>
+                                    <div style="width: 23%;">Fat</div>
+                                    <div style="width: 23%;">Carboh…</div>
+                                    <div style="width: 23%;">Protein</div>
+                                    <div style="width: 5%;"></div>
+                                </li>
+                            </ol>
+
+                            <!-- Dữ liệu -->
+                            <ul id="container-ul-recipes-info">
+                                <li class="container-ul-li-recipes-info" style="color: #424242;">
+                                    <div class="container-ul-li-recipes-info-01">
+                                        <div style="font-weight: 500;">Keto 90 Second Bread</div>
+                                        <div style="color: #888888; font-size: 14px;">Community Recipes</div>
+                                        <div style="font-size: 12px; color: #888;" class="container-ul-li-child">
+                                            <div class="quantity-ul-li-child"><input type="number"></div>
+                                            <div class="quantity-ul-li-child">portion (87 grams)</div>
+                                            <div class="quantity-ul-li-child">87g</div>
+                                        </div>
+                                    </div>
+                                    <div class="container-ul-li-recipes-info-02">
+                                        <div style="width: 23%;">301 kcal</div>
+                                        <div style="width: 23%;">27 g</div>
+                                        <div style="width: 23%;">6 g</div>
+                                        <div style="width: 23%;">11 g</div>
+                                        <button class="btn-add-recipes-detail" data-id=""><i
+                                                class="fa-solid fa-plus"></i></button>
+                                    </div>
+                                </li>
+                                <!-- Thêm ở đây -->
+                            </ul>
+
+                            <div class="btn-select-page">
+                                <button id="btnPrevRecipes"><i class="fa-solid fa-backward"
+                                        id="iPrevRecipes"></i></button>
+                                <div class="btnPagesRecipes"></div>
+                                <button id="btnNextRecipes"><i class="fa-solid fa-forward"
+                                        id="iNextRecipes"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-cooking">
+                    <div class="cooking-child01">
+                        <div style="color: #676a6c; font-size: 25px; font-weight: 500;">Cooking method</div>
+                        <div style="color: #888888;">Give instructions to prepare this recipe</div>
+                    </div>
+
+                    <div class="cooking-child02-add">
+                        <div>1</div>
+                        <div>
+                            <button id="btnAddCooking"><i class="fa-solid fa-pen" style=" color: #1ab394;"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="container-section-child02">
+                <li class="global-analysis-per-portion">
+                    <div style="color: #676A6C; font-size: 25px; font-weight: 600;">Global analysis per portion</div>
+                    <div style="color: #888888;">Energy, macronutrients and fiber distribution</div>
+                    <div class="enegry">
+                        <p>Energy</p>
+                        <h4><span>kcal</span></h4>
+                    </div>
+                    <div class="container-child-nutrition">
+                        <div>
+                            <p style="border: 10px solid #db4965;">g</p>
+                            <p>Fat</p>
+                        </div>
+                        <div>
+                            <p style="border: 10px solid #ea9f77;">g</p>
+                            <p>Carbohydrate</p>
+                        </div>
+                        <div>
+                            <p style="border: 10px solid #1ab394;">g</p>
+                            <p>Protein</p>
+                        </div>
+                        <div>
+                            <p style="border: 10px solid #6a7d93;">g</p>
+                            <p>Fiber</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="macronutrients-per-portion">
+                    <div style="color: #676a6c; font-size: 25px; font-weight: 700;">Macronutrients per portion</div>
+                    <div style="color: #888888;">Macronutrients distribution of the recipe</div>
+                    <div class="chart-recipes">
+                        <div style="width: 300px; height: 300px;">
+                            <canvas id="macroChart"></canvas>
+                        </div>
+                        <div class="chart-legend">
+                            <span class="legend-item">
+                                <span class="legend-color" style="background-color: #d9534f;"></span> Fat
+                            </span>
+                            <span class="legend-item">
+                                <span class="legend-color" style="background-color: #f0ad4e;"></span> Carbohydrate
+                            </span>
+                            <span class="legend-item">
+                                <span class="legend-color" style="background-color: #5cb85c;"></span> Protein
+                            </span>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="Micronutrients-info">
+                    <div style="font-size: 25px; color: #676A6C; font-weight: 700;">Micronutrients per portion</div>
+                    <div style="color: #888888; margin-bottom: 30px;">Micronutrients distribution of the recipe</div>
+
+                    <div class="child-micronutrients-info">
+                        <!-- Các mục dưới đây đã được xoá input, giữ nguyên tên vi chất và đơn vị -->
+                        <div class="micronutrient-item">
+                            <p class="micronutrient-name">Sodium</p>
+                            <p class="micronutrient-value"><strong></strong> mg</p>
+                        </div>
+                        <div class="micronutrient-item">
+                            <p class="micronutrient-name">Vitamin A</p>
+                            <p class="micronutrient-value"><strong></strong> ug</p>
+                        </div>
+                        <div class="micronutrient-item">
+                            <p class="micronutrient-name">Vitamin B-6</p>
+                            <p class="micronutrient-value"><strong></strong> mg</p>
+                        </div>
+                        <div class="micronutrient-item">
+                            <p class="micronutrient-name">Vitamin B-12</p>
+                            <p class="micronutrient-value"><strong></strong> ug</p>
+                        </div>
+                        <div class="micronutrient-item">
+                            <p class="micronutrient-name">Vitamin C</p>
+                            <p class="micronutrient-value"><strong></strong> mg</p>
+                        </div>
+                        <div class="micronutrient-item">
+                            <p class="micronutrient-name">Vitamin D (D2 + D3)</p>
+                            <p class="micronutrient-value"><strong></strong> ug</p>
+                        </div>
+                        <div class="micronutrient-item">
+                            <p class="micronutrient-name">Vitamin E</p>
+                            <p class="micronutrient-value"><strong></strong> mg</p>
+                        </div>
+                        <div class="micronutrient-item">
+                            <p class="micronutrient-name">Vitamin K</p>
+                            <p class="micronutrient-value"><strong></strong> ug</p>
+                        </div>
+                        <div class="micronutrient-item">
+                            <p class="micronutrient-name">Sugars</p>
+                            <p class="micronutrient-value"><strong></strong> g</p>
+                        </div>
+                        <div class="micronutrient-item">
+                            <p class="micronutrient-name">Calcium</p>
+                            <p class="micronutrient-value"><strong></strong> mg</p>
+                        </div>
+                        <div class="micronutrient-item">
+                            <p class="micronutrient-name">Iron</p>
+                            <p class="micronutrient-value"><strong></strong> mg</p>
+                        </div>
+                        <div class="micronutrient-item">
+                            <p class="micronutrient-name">Magnesium</p>
+                            <p class="micronutrient-value"><strong></strong> mg</p>
+                        </div>
+                        <div class="micronutrient-item">
+                            <p class="micronutrient-name">Phosphorus</p>
+                            <p class="micronutrient-value"><strong></strong> mg</p>
+                        </div>
+                        <div class="micronutrient-item">
+                            <p class="micronutrient-name">Potassium</p>
+                            <p class="micronutrient-value"><strong></strong> mg</p>
+                        </div>
+                        <div class="micronutrient-item">
+                            <p class="micronutrient-name">Zinc</p>
+                            <p class="micronutrient-value"><strong></strong> mg</p>
+                        </div>
+                        <div class="micronutrient-item">
+                            <p class="micronutrient-name">Copper</p>
+                            <p class="micronutrient-value"><strong></strong> mg</p>
+                        </div>
+                        <div class="micronutrient-item">
+                            <p class="micronutrient-name">Fluoride</p>
+                            <p class="micronutrient-value"><strong></strong> ug</p>
+                        </div>
+                        <div class="micronutrient-item">
+                            <p class="micronutrient-name">Manganese</p>
+                            <p class="micronutrient-value"><strong></strong> mg</p>
+                        </div>
+                        <div class="micronutrient-item">
+                            <p class="micronutrient-name">Selenium</p>
+                            <p class="micronutrient-value"><strong></strong> ug</p>
+                        </div>
+                        <div class="micronutrient-item">
+                            <p class="micronutrient-name">Thiamin</p>
+                            <p class="micronutrient-value"><strong></strong> mg</p>
+                        </div>
+                        <div class="micronutrient-item">
+                            <p class="micronutrient-name">Riboflavin</p>
+                            <p class="micronutrient-value"><strong></strong> mg</p>
+                        </div>
+                        <div class="micronutrient-item">
+                            <p class="micronutrient-name">Niacin</p>
+                            <p class="micronutrient-value"><strong></strong> mg</p>
+                        </div>
+                        <div class="micronutrient-item">
+                            <p class="micronutrient-name">Pantothenic acid</p>
+                            <p class="micronutrient-value"><strong></strong> mg</p>
+                        </div>
+                        <div class="micronutrient-item">
+                            <p class="micronutrient-name">Folate, total</p>
+                            <p class="micronutrient-value"><strong></strong> ug</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+
+    <script src="/js/utils.js"></script>
+    <script src="/js/SignOut.js"></script>
+    <script src="/js/regipes-detai-add.js"></script>
+</body>
+
+</html>
