@@ -356,14 +356,16 @@ main .main-title p:nth-of-type(2) {
     cursor: pointer;
     align-items: center;
 }
-.section-MyRecipes .btnMyRecipes{
+
+.section-MyRecipes .btnMyRecipes {
     border: 1px solid #f2f2f2;
     background-color: white;
     padding: 5px;
 }
+
 .section-MyRecipes .btnMyRecipes p,
- .section-MyRecipes .btnMyRecipes i {
-  color:#2ba0cc;
+.section-MyRecipes .btnMyRecipes i {
+    color: #2ba0cc;
 }
 
 /* Blog */
@@ -422,7 +424,6 @@ main .main-title p:nth-of-type(2) {
 }
 
 .title-like p:nth-of-type(1) {
-    font-size: 14px;
     color: #aeaeae;
 }
 
@@ -436,6 +437,7 @@ main .main-title p:nth-of-type(2) {
     height: auto;
     overflow: hidden;
     background-color: white;
+
 }
 
 .tag .commmunity-img {
@@ -444,7 +446,7 @@ main .main-title p:nth-of-type(2) {
     height: auto;
     object-fit: cover;
     object-fit: contain;
-}  
+}
 
 .tag .commmunity {
     position: absolute;

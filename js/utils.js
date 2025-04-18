@@ -20,6 +20,17 @@ fetch("/pages/login.html")
     })
     .catch(error => console.error("Lỗi khi tải login:", error));
 
+//Tải dữ liệu homaPage vào recipes
+fetch("/components/homePage.html")
+    .then(response => response.text())
+    .then(data => {
+        const header = document.getElementById("homePage");
+        if (header) {
+            header.innerHTML = data;
+        }
+    })
+    .catch(error => console.error("Lỗi khi tải homePage:", error));
+
 // Nút bấm đóng mở header
 document.addEventListener("DOMContentLoaded", function () {
     const header = document.getElementById("header");
